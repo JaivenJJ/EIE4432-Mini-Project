@@ -1,0 +1,238 @@
+:root {
+    --header-bg-color: rgba(52, 58, 64, 0.9);
+    --footer-bg-color: #343a40;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #222;
+    position: relative;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/cinema.jpg') center center / cover no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+header {
+    z-index: 1;
+}
+
+.header-logo {
+    max-height: 80px;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: var(--header-bg-color);
+    align-items: flex-end;
+    padding: 0.5rem 1rem;
+    z-index: 5;
+}
+
+.seat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+}
+
+.black-box {
+    width: 600px;
+    height: 700px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.seat-map {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 40px repeat(10, 1fr) 40px;
+    gap: 0;
+    padding: 10px;
+    z-index: 1;
+}
+
+.seat {
+    background-color: transparent;
+    border: 2px solid rgb(243, 118, 40);
+    color: rgb(243, 118, 40);
+    cursor: pointer;
+    padding: 7px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.seat.selected {
+    background-color: rgb(243, 118, 40);
+    color: white;
+}
+
+.label {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.left-label, .right-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: white;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.movie-info {
+    text-align: left;
+    margin-left: 10px;
+    color: white;
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.movie-poster {
+    width: 200px;
+    height: auto;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    border-radius: 5px;
+    margin: 20px 10px 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.info-container {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-line {
+    width: 85%;
+    height: 2px;
+    background-color: rgb(169, 171, 174);
+    margin-top: 100px;
+}
+
+.screen-text {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.button-BUY {
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 24px;
+    min-width: 140px;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 20px; /* Space above the button */
+}
+
+.button-BUY:focus {
+    color: #171e29;
+}
+
+.button-BUY:hover {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+.button-BUY:active {
+    border-color: #06f;
+    color: #06f;
+    fill: #06f;
+}
+
+@media (min-width: 768px) {
+    .button-BUY {
+        min-width: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .black-box {
+        width: 100%;
+    }
+    .movie-info {
+        margin-left: 0;
+        text-align: center;
+    }
+    .info-container {
+        margin-left: 0;
+    }
+}
+
+.profile-container{
+    flex:2;
+    display:flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.occupied {
+    background-color: rgb(243, 118, 40); /* Change to your desired color */
+    pointer-events: none; /* Prevent interaction */
+}

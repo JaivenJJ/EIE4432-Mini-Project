@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Green Hornet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/moviestyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="../scripts/movie.js"></script>
+</head>
+<body>
+
+<div class="background-image"></div>
+
+<header class="text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark"> <!--NavBar Stuff-->
+        <div class="container-fluid"> 
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="Logo" class="header-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../movieDetail.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://facebook.com" target="_blank">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://Instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="profile-container">
+                            <img class="profile-picture" src="../assets/defaultprofile.png" alt="profile-picture">
+                            <a class="nav-link" href="../user.html">Profile</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <img src="../assets/hornetPoster.jpg" alt="hornet" class="movie-poster">
+    <div class="movie-details">
+        <h1 class="movie-title">The Green Hornet</h1>
+        <p><strong>Release Date:</strong> January 14, 2011</p>
+        <p><strong>Runtime:</strong> 119 mins</p>
+        <p><strong>Genre:</strong> Action, Adventure, Sci-Fi</p>
+        <p><strong>Director:</strong> Michel Gondry</p>
+        <p>Britt Reid (Seth Rogen) is a slacker by day, party animal by night...
+        until he finds a serious career that's seriously cool: crime-fighting
+        action hero. As the Green Hornet, he teams up with gadget wiz and 
+        martial arts master Kato (Jay Chou) to take down LA's underworld.</p>
+    </div>
+</main>
+
+<div class="container show-times">
+    <h3>Select Showtimes</h3>
+    <div class="showtimes">
+        <button class="btn btn-outline-light date-slot selected" id="today-link"></button>
+        <button class="btn btn-outline-light date-slot" id="tomorrow-link"></button>
+        <button class="btn btn-outline-light date-slot" id="day-after-tomorrow-link"></button>
+        <button class="btn btn-outline-light date-slot" id="in-three-days-link"></button>
+    </div>
+    <div>
+        <p><strong>Available Times:</strong></p>
+        <button class="btn btn-outline-light time-slot">12:40</button>
+        <button class="btn btn-outline-light time-slot">16:20</button>
+        <button class="btn btn-outline-light time-slot">19:30</button>
+    </div>
+</div>
+
+<footer class="text-white text-center p-3">
+    © 22077009d TSANG Ho Nam | 22076742d CHIU Tsz Fung - EIE4432 Cinema Ticket Selling Project
+</footer>
+
+</body>
+</html>
